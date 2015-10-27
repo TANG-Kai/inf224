@@ -4,6 +4,7 @@
 
 class Media_video : public Media_base
 {
+protected:
     double length;
 
 public:

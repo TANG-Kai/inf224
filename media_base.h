@@ -2,7 +2,7 @@
 #define MEDIA_BASE_H
 #include<iostream>
 #include<string>
-
+#include<assert.h>
 class Media_base{
     std::string name_of_object,name_of_file;
 public:
