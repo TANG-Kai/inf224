@@ -17,8 +17,11 @@ Media_video(name_of_object, name_of_file, l){
 Media_film::Media_film(std::string name_of_object,std::string name_of_file, double t_o_l[], int n):
 Media_video(name_of_object, name_of_file, 0){
   assert(t_o_l != NULL && n > 0);//make sure that it's a table non-empty
-  table_of_length = t_o_l;
+  table_of_length = new double[n];// do a new copy of array, so that it won't change according to the original
   number_of_chapters = n;
+  for(int i=0;i<n;i++){
+	table_of_length[i] = t_o_l[i];
+  }
   double sum = 0;
   for(int i=0;i< number_of_chapters;i++){
     assert(table_of_length[i]>=0);
@@ -36,12 +39,14 @@ void Media_film::show_values(std::ostream &out) const{
   out<<std::endl;
 }
 
-
-void Media_film::set_table(double t_o_l[], int n){
+void Media_film::set_table(double t_o_l[], int n){//delete old table, copy values into new table
   assert(t_o_l != NULL && n > 0);//make sure that it's a table non-empty
-  table_of_length = t_o_l;// shouldn't delete table, because it could be
+  delete table_of_length;
   number_of_chapters = n;
-
+  table_of_length = new double[n];
+  for(int i=0;i<n;i++){
+	table_of_length[i] = t_o_l[i];
+  }
   double sum = 0;
   for(int i=0;i< number_of_chapters;i++){
     assert(table_of_length[i]>=0);
