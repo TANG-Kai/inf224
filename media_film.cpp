@@ -30,6 +30,14 @@ Media_video(name_of_object, name_of_file, 0){
   length = sum;
 }
 
+Media_film::Media_film( const  Media_film& other): Media_video(other){//calling copy constructor of base class
+    number_of_chapters = other.number_of_chapters;
+    if(table_of_length != NULL) delete table_of_length;
+    table_of_length = new double[number_of_chapters];
+    for(int i=0;i<number_of_chapters;i++){
+        table_of_length[i] = other.table_of_length[i];
+    }
+}
 
 void Media_film::show_values(std::ostream &out) const{
   out<<number_of_chapters<<std::endl;

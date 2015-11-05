@@ -21,11 +21,10 @@ int main()
       mb[i]->play();
     }
 */
-		Media_film mf("obj1", "drop.avi",80);
-		double table_of_length[3] = {1, 5, 80};
-		mf.set_table(table_of_length,3);
-		mf.show_values(std::cout);
-		mf.play();	
-
+	Media_film mf("obj1", "drop.avi",80);
+	double table_of_length[3] = {1, 5, 80};
+	mf.set_table(table_of_length,3);
+	mf.show_values(std::cout);
+	mf.play();	
     return 0;
 }
