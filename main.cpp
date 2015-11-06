@@ -5,12 +5,12 @@
 #include"media_list.h"
 int main()
 {
-    Media_video* mv = new Media_video("obj1", "drop.avi",2);
-    Media_base* mv_base = mv;
+    std::shared_ptr<Media_video> mv(new Media_video("obj1", "drop.avi",2));
+    mbptr mv_base = mv;
     mv_base->show_values(std::cout);
     mv_base->play();
 
-    Media_photo * mp = new Media_photo("obj2", "lena_color.gif");
+    std::shared_ptr<Media_photo> mp(new Media_photo("obj2", "lena_color.gif"));
     mv_base = mp;
     mv_base->play();
 /*
@@ -30,7 +30,7 @@ int main()
 	mf.play();
     */
 
-    std::list<Media_base*> list;
+    std::list<mbptr> list;
     list.push_back(mv);
     list.push_back(mp);
 

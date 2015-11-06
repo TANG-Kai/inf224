@@ -14,7 +14,7 @@ Media_video(name_of_object, name_of_file, l){
   number_of_chapters = 1;
 }
 
-Media_film::Media_film(std::string name_of_object,std::string name_of_file, double t_o_l[], int n):
+Media_film::Media_film(std::string name_of_object,std::string name_of_file, double* t_o_l, int n):
 Media_video(name_of_object, name_of_file, 0){
   assert(t_o_l != NULL && n > 0);//make sure that it's a table non-empty
   table_of_length = new double[n];// do a new copy of array, so that it won't change according to the original

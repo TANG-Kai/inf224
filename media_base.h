@@ -3,6 +3,9 @@
 #include<iostream>
 #include<string>
 #include<assert.h>
+#include<memory>
+class Media_base;
+typedef std::shared_ptr<Media_base> mbptr;
 class Media_base{
     std::string name_of_object,name_of_file;
 public:
