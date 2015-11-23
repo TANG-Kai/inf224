@@ -8,6 +8,10 @@
 #include <sstream> 
 #include "TCPServer.h"
 #include "media_map.h"
+#include <cereal/types/unordered_map.hpp>
+#include <cereal/types/memory.hpp>
+#include <cereal/archives/binary.hpp>
+#include <fstream>
 using namespace std;
 
 const int DEFAULT_PORT = 3331;

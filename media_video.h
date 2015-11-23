@@ -13,6 +13,11 @@ public:
     void virtual play() const;
     void virtual show_values(std::ostream &out) const;
     double virtual get_length() const;
+    friend class cereal::access;
+    void virtual serialize( cereal::JSONOutputArchive & ar )
+    {
+      ar( cereal::base_class<Media_base>( this ), length );
+    }
 };
 
 #endif // MEDIA_VIDEO_H

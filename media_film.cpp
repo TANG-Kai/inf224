@@ -46,7 +46,7 @@ void Media_film::show_values(std::ostream &out) const{
   }
 }
 
-void Media_film::set_table(double t_o_l[], int n){//delete old table, copy values into new table
+void Media_film::set_table(double* t_o_l, int n){//delete old table, copy values into new table
   assert(t_o_l != NULL && n > 0);//make sure that it's a table non-empty
   delete table_of_length;
   number_of_chapters = n;

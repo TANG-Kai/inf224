@@ -10,6 +10,12 @@ public:
     Media_photo(std::string name , std::string filename, double x=0,  double y=0);
     void virtual play() const;
     void virtual show_values(std::ostream &out) const;
+
+    friend class cereal::access;
+    void virtual serialize( cereal::JSONOutputArchive & ar )
+    {
+      ar( cereal::base_class<Media_base>( this ), x,y);
+    }
 };
 
 #endif // MEDIA_PHOTO_H

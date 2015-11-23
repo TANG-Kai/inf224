@@ -31,7 +31,7 @@ CXX = c++
 #   -std=c++11 pour C++11
 # Example: CXXFLAGS= -std=c++11 -Wall -O -I/usr/local/qt/include
 #
-CXXFLAGS = -std=c++11 -Wall -g
+CXXFLAGS = -std=c++11 -Wall -g -I${CURDIR}
 
 #
 # Options de l'editeur de liens
