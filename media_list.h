@@ -2,6 +2,8 @@
 #define MEDIA_LIST_H
 #include"media_base.h"
 #include<list>
+class Media_list;
+typedef std::shared_ptr<Media_list> mlptr;
 using namespace std;
 class Media_list : public list<mbptr>{
     string name;
@@ -10,6 +12,7 @@ public:
     Media_list(list<mbptr>& lst,string name): list(lst){ this->name = name;}
     string get_name();
     void virtual show_values(std::ostream &out) const;
+    void virtual play() const;
 };
 
 #endif//MEDI_LIST_H

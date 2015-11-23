@@ -10,3 +10,9 @@ void Media_list::show_values(std::ostream &out) const{
        (*it)->show_values(out);
     }
 }
+
+void Media_list::play() const{
+    for(Media_list::const_iterator it = begin();it!=end();++it){
+       (*it)->play();
+    }
+}
