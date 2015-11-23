@@ -40,11 +40,10 @@ Media_film::Media_film( const  Media_film& other): Media_video(other){//calling 
 }
 
 void Media_film::show_values(std::ostream &out) const{
-  out<<number_of_chapters<<std::endl;
+  out<<"chapter count: "<<number_of_chapters<<' ';
   for(int i=0;i< number_of_chapters;i++){
-    out<<table_of_length[i]<<" ";
+    out<<"length of "<<i<<"th chapter: "<<table_of_length[i]<<" ";
   }
-  out<<std::endl;
 }
 
 void Media_film::set_table(double t_o_l[], int n){//delete old table, copy values into new table

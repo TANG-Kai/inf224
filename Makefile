@@ -10,11 +10,10 @@
 # Nom du programme
 #
 PROG = myprog
-
 #
 # Fichiers sources (NE PAS METTRE les .h ni les .o seulement les .cpp)
 #
-SOURCES = media_base.cpp main.cpp media_video.cpp  media_photo.cpp media_film.cpp media_list.cpp media_map.cpp
+SOURCES = media_base.cpp main.cpp media_video.cpp  media_photo.cpp media_film.cpp media_list.cpp media_map.cpp TCPServer.cpp Socket.cpp 
 
 #
 # Fichiers objets (ne pas modifier sauf si l'extension n'est pas .cpp)
@@ -43,7 +42,7 @@ LDFLAGS =
 # Librairies a utiliser
 # Example: LDLIBS = -L/usr/local/qt/lib -lqt
 #
-LDLIBS =
+LDLIBS = -lpthread
 
 
 ##########################################

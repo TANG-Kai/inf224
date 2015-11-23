@@ -25,8 +25,7 @@ void Media_base::set_file_name(std::string const name_of_file)
 
 void Media_base::show_values(std::ostream &out) const
 {
-    out<<name_of_object<<std::endl;
-    out<<name_of_file<<std::endl;
+    out<<"obj name: "<<name_of_object<<" file name: "<<name_of_file<<' ';
 }
 
 std::string  Media_base::get_name() const

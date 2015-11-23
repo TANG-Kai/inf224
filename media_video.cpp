@@ -22,7 +22,7 @@ void Media_video::play() const
 void  Media_video::show_values(std::ostream &out) const
 {
     Media_base::show_values(out);
-    out<<get_length()<<std::endl;
+    out<<" length: "<<get_length()<<" ";
 
 }
 

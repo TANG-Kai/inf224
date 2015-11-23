@@ -1,7 +1,8 @@
 #include"media_map.h"
 using namespace std;
-void Media_map::add_basemedia(string name,mbptr m){
+void Media_map::add_basemedia(mbptr m){
     map<string, mbptr>::iterator it;
+    string name= m->get_name();
     it = basemap.find(name);
     if(it!= basemap.end())
         cout<<"already in map, failed to add "<<name;
@@ -9,7 +10,8 @@ void Media_map::add_basemedia(string name,mbptr m){
         basemap[name]  = m;
 }
 
-void Media_map::add_list(string name, mlptr list){
+void Media_map::add_list(mlptr list){
+    string name = list->get_name();
     map<string, mlptr>::iterator it;
     it = listmap.find(name);
     if(it!= listmap.end())
@@ -46,7 +48,7 @@ void Media_map::find_and_show(string key,ostream &out){
         itml->second->show_values(out);
     }
     else// can't find proper key
-        cout<<"can't find_and_show this key: "<<key;
+        out<<"can't find_and_show this key: "<<key<<endl;
 }
 
 void Media_map::find_and_play(string key){

@@ -11,8 +11,8 @@ class Media_map{
     map<string, mlptr> listmap;
     public:
     Media_map():basemap(),listmap(){mapname = "";}
-    void add_basemedia(string name,mbptr m);
-    void add_list(string name,mlptr list);
+    void add_basemedia(mbptr m);
+    void add_list(mlptr list);
     void erase_by_key(string key);
     void find_and_show(string key,ostream & out);
     void find_and_play(string key);

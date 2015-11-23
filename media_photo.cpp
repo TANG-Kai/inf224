@@ -24,7 +24,6 @@ void Media_photo::play() const
 void Media_photo::show_values(std::ostream &out) const
 {
     Media_base::show_values(out);
-    out<<x<<std::endl;
-    out<<y<<std::endl;
+    out<<"length: "<<x<<" width: "<<y<<' ';
 
 }
