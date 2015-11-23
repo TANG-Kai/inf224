@@ -1,0 +1,7 @@
+media_base.o: media_base.cpp media_base.h
+main.o: main.cpp media_base.h media_video.h media_photo.h media_film.h \
+ media_list.h
+media_video.o: media_video.cpp media_video.h media_base.h
+media_photo.o: media_photo.cpp media_photo.h media_base.h
+media_film.o: media_film.cpp media_film.h media_video.h media_base.h
+media_list.o: media_list.cpp media_list.h media_base.h
